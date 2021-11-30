@@ -1,0 +1,2 @@
+Write a program to accept a number from the user and raise an event if the number happens to be a prime palindrome number
+A palindromic prime is a number that is simultaneously palindrome and prime. The first few (base-10) palindromic primes are 2, 3, 5, 7, 11, 101, 131, 151, 181, 191, 313, 353, etc..
