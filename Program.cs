@@ -6,7 +6,11 @@ namespace ActivityE5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Console.WriteLine(PalindromicPrime.IsPrime(171));
+            Console.WriteLine(PalindromicPrime.IsPalindrome(171));
+
+            
         }
     }
 }

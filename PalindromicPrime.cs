@@ -2,9 +2,9 @@ using System;
 
 namespace ActivityE5
 {
-    class PalindromicPrime
+    static class PalindromicPrime
     {
-        public bool IsPrime(int number)
+        static public bool IsPrime(int number)
         {
             bool isPrime = true;
             for(int i = 2; i < number; i++)
@@ -17,11 +17,12 @@ namespace ActivityE5
             }
             return isPrime;
         }
-        public bool IsPalindrome(string input)
+        static public bool IsPalindrome(int number)
         {
-            bool isPalindrome;
+            string input = number.ToString();
+            bool isPalindrome = true;
             string[] arrayChars = new string[input.Length];
-            string[] reverseArrayChars = new string[input.Length];
+            string[] reversedArrayChars = new string[input.Length];
 
             for(int i = 0; i < input.Length; i++)
             {
@@ -30,10 +31,18 @@ namespace ActivityE5
             int j = 0;
             for(int i = arrayChars.Length-1; i >= 0; i--)
             {
-                reverseArrayChars[j] = arrayChars[i];
+                reversedArrayChars[j] = arrayChars[i];
                 j++;
             }
-            
+            for(int i = 0; i < arrayChars.Length; i++)
+            {
+                if(arrayChars[i] != reversedArrayChars[i])
+                {
+                    isPalindrome = false;
+                    return isPalindrome;
+                }
+            }
+            return isPalindrome;
         }
     }
 }
