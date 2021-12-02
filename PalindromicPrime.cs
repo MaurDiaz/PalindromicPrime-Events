@@ -7,6 +7,11 @@ namespace ActivityE5
         static public bool IsPrime(int number)
         {
             bool isPrime = true;
+            if(number == 0 || number == 1)
+            {
+                isPrime = false;
+                return isPrime;
+            }
             for(int i = 2; i < number; i++)
             {
                 if(number % i == 0)

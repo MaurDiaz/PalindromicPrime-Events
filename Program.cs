@@ -6,12 +6,20 @@ namespace ActivityE5
     {
         static void Main(string[] args)
         {
-            //Events event = new Events();
-
-            Console.WriteLine(PalindromicPrime.IsPrime(171));
-            Console.WriteLine(PalindromicPrime.IsPalindrome(171));
-
-
+           UserInput value = new UserInput();
+           value.PrimeEvent += Notify;
+           value.PalindromeEvent += Notify;
+           string input;
+           do{
+                Console.WriteLine("Enter a positive integer or 'exit' to end:");
+                input = Console.ReadLine();
+                value.Number = input;
+           }while(input != "exit");
+        }
+        static void Notify(string message)
+        {
+            
+            Console.WriteLine(message);
         }
     }
 }
